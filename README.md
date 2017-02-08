@@ -8,7 +8,7 @@ Pacman is a flat and responsive design theme for [Hexo](http://hexo.io).
 ##Installation
 ###Install
 ```
-$ git clone https://github.com/A-limon/pacman.git themes/pacman
+$ git clone https://github.com/syxdevcode/pacman.git themes/pacman
 ```
 **Pacman requires Hexo 2.4.5 and above.** 
 ###Enable

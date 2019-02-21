@@ -96,7 +96,7 @@
 .archive-icon:before
   content "\f187"
 
-.archive-title
+.archive-title-bytime
   margin 1em 0
   width 97%
   padding 2em 0 2em 3%
@@ -117,6 +117,37 @@
     &:hover
       color color-theme
       transition color .5s
+	  
+.archive-title
+  margin 1em 0
+  width 97%
+  padding 2em 0 2em 3%
+  @media tablet
+    margin 2em 0
+    width 18.5%
+    padding-left 0.5%
+    float left
+  background color-section
+  border-left 0.5em solid color-gray
+  h2
+    width 90%
+    color color-blue
+    font-size font-size+20
+  a
+    display: inline-block;
+    background: #eaeaea;
+    border: 1px solid rgba(255,255,255,.8);
+    padding: 0 12px;
+    line-height: 26px;
+    text-decoration: none;
+    margin: 0 2px;
+    margin-bottom: 8px;
+    border-radius: 999em;
+	
+    &:hover
+      color color-theme
+      transition color .5s
+	  
 .current
   color color-theme !important
 

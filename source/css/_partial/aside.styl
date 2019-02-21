@@ -56,6 +56,7 @@
 
 //categories
 .categorieslist
+  margin 1em 0 0
   @media mini
     width 45%
     float left
@@ -64,13 +65,24 @@
     width 100%
     float none
     margin 1em 0 0
-  li 
-    border-bottom 1px solid color-gray
+  ul
+    padding 0.5em 0
+  ul li
+    float left
     a
-      display block
-      padding 0.5em 5%
+      display: inline-block;
+      background: #eaeaea;
+      border: 1px solid rgba(255,255,255,.8);
+      padding: 0 12px;
+      line-height: 26px;
+      text-decoration: none;
+      margin: 0 2px;
+      margin-bottom: 8px;
+      border-radius: 999em;
+
       &:hover
         color color-theme
+        background lighten(color-gray, 50%)
 
 //tag
 .tagslist

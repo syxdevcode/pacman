@@ -1,5 +1,5 @@
 <% if (site.tags.length){ %>
-<div class="tagslist">
+<div class="tagslist" style="clear:both;">
 	<p class="asidetitle"><%= __('tags') %></p>
 		<ul class="clearfix">
 		<% site.tags.sort('name').limit(20).each(function(item){ %>

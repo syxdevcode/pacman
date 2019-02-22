@@ -81,13 +81,14 @@
 <script type="text/javascript">
   $(document).ready(function () {
     var $this = $('.share'),
-      url = $this.attr('data-url'),
+      //url = $this.attr('data-url'),
+      url = window.location.href,
       encodedUrl = encodeURIComponent(url),
       title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
+      tsina = $this.attr('data-tsina');    
     var html = [
       '<a href="#" class="overlay" id="qrcode"></a>',
-      '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+      '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://mobile.qq.com/qrcode?url=' + encodedUrl + '"/></div>',
       '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
       '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
       '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
@@ -96,14 +97,18 @@
       '<span title="Share to"></span>'
     ].join('');
     $this.append(html);
-    $('.article-share-qrcode').click(function () {
+    viewqrCode();
+    $('.article-share-qrcode').click(viewqrCode()
+    );
+    
+  });     
+  function viewqrCode(){
       var imgSrc = $('#qrcode-pic').attr('data-src');
       $('#qrcode-pic').attr('src', imgSrc);
       $('#qrcode-pic').load(function () {
         $('.qrcode strong').text(' ');
       });
-    });
-  });     
+    }
 </script>
 <% } %>
 <% if ((page.layout=='post'||page.layout=='page')&&theme.duoshuo.enable && page.comments){ %>
